@@ -1,0 +1,36 @@
+#!/bin/sh /etc/rc.common
+# Starts and stops Node-RED
+# /etc/init.d/node-red
+
+START=90
+STOP=10
+
+# The log is written to here - please make sure your user has write permissions.
+LOG=/var/log/node-red.log
+
+start() {
+    echo "Starting Node-Red..."
+    touch $LOG
+    echo "" >> $LOG
+    echo "Node-RED service start: "$(date) >> $LOG
+    node-red -u /etc/node-red flows.json >> $LOG &
+    echo "Logging to "$LOG
+}
+
+stop() {
+    echo "Stopping Node-Red..."
+    killall -SIGINT node-red
+    sleep 3
+    echo "" >> $LOG
+    echo "Node-RED service stop: "$(date) >> $LOG
+}
+
+restart() {
+    echo "Restarting Node-Red..."
+    killall -SIGINT node-red
+    sleep 3
+    rm -f $LOG && touch $LOG && echo "" >> $LOG
+    echo "Node-RED service restart: "$(date) >> $LOG
+    node-red -u /etc/node-red flows.json >> $LOG &
+    echo "Logging to "$LOG
+}
