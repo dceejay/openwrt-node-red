@@ -3,6 +3,7 @@
 # assumes you have set up root ssh access
 
 MyOpenWRT=9.180.88.55
+# MyOpenWRT=192.168.1.110
 
 echo -e "Copy over some files"
 rm -rf dist*

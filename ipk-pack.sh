@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VER=0.19.4
+VER=0.19.5
 
 echo -e "\nTidy up"
 cd /usr/lib/node_modules
