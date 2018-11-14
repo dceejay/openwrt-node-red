@@ -2,8 +2,7 @@
 # point this at the IP address of your OpenWRT build box
 # assumes you have set up root ssh access
 
-MyOpenWRT=9.180.88.55
-# MyOpenWRT=192.168.1.110
+MyOpenWRT=PiOpenWrt.local
 
 echo -e "Copy over some files"
 rm -rf dist*
@@ -16,7 +15,7 @@ ssh root@$MyOpenWRT rm -f /etc/node-red/.*.backup
 ssh root@$MyOpenWRT ./ipk-pack.sh
 cd dist
 scp -p root@$MyOpenWRT:/tmp/node*.ipk ./
-../opkg-utils/opkg-make-index . > Packages
+python3 ../opkg-utils/opkg-make-index . > Packages
 gzip Packages
 cd ..
 ls -l dist/*

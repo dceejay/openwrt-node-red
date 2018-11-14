@@ -2,7 +2,8 @@
 cd /root
 #opkg list-upgradable | cut -f 1 -d ' ' | xargs opkg upgrade
 opkg install node-npm
-npm i -g npm node-red
+npm i -g npm
+npm i -g --unsafe-perm node-red
 mkdir -p /etc/node-red
 cp node-red /etc/init.d/node-red
 cp flows.json /etc/node-red/flows.json

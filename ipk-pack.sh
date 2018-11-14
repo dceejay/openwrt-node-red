@@ -1,6 +1,8 @@
 #!/bin/sh
 
-VER=0.19.5
+echo ""
+VER=$(node-red -? | grep RED | cut -d "v" -f 2)
+echo "NODE-RED VERSION is "$VER
 
 echo -e "\nTidy up"
 cd /usr/lib/node_modules
