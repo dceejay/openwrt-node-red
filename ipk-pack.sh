@@ -38,6 +38,7 @@ cd /usr/lib/node_modules/node-red/node_modules
  find . -type f -iname usage.txt -exec rm {} \;
  find . -type f -iname example.js -exec rm {} \;
  find . -type d -name node-pre-gyp-github -exec rm -r {} \;
+ find . -type f -iname build-all.json -exec rm {} \;
 # find . -iname LICENSE* -type f -exec rm {} \;
 
 echo -e "\nTar up the existing install"
