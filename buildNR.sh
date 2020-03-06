@@ -20,3 +20,4 @@ cp -R /usr/src/openwrt-node-red/luci/* /usr/lib/lua/luci/
 cd /etc/node-red
 npm i node-red-node-random node-red-contrib-web-worldmap node-red-dashboard bufferutil utf-8-validate
 rm -rf /usr/lib/node_modules/node-red/nodes/core/hardware
+opkg remove make gcc
