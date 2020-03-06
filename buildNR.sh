@@ -13,6 +13,7 @@ npm i -g npm
 npm i -g --unsafe-perm node-red
 mkdir -p /etc/node-red
 cp /usr/src/openwrt-node-red/node-red /etc/init.d/node-red
+/etc/init.d/node-red enable
 cp /usr/src/openwrt-node-red/flows.json /etc/node-red/flows.json
 cp /usr/src/openwrt-node-red/flows_cred.json /etc/node-red/flows_cred.json
 cp -R /usr/src/openwrt-node-red/luci/* /usr/lib/lua/luci/
