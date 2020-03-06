@@ -4,6 +4,9 @@
 ###  Please check to see if they are appropiate for you before using
 ###
 cd /root
+opkg install make gcc python3
+ln -s /usr/bin/gcc /usr/bin/cc
+ar -rc /usr/lib/libpthread.a
 #opkg list-upgradable | cut -f 1 -d ' ' | xargs opkg upgrade
 opkg install node-npm
 npm i -g npm
