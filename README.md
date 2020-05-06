@@ -1,10 +1,12 @@
 # openwrt-node-red
 
+[![platform](https://img.shields.io/badge/platform-Node--RED-red)](https://nodered.org)
+
 A packaging up of Node-RED for OpenWRT.
 
 The `dist` directory contains the .ipk file you need to download and install. For example
 
-    opkg install node-red_0.19.4.ipk
+    opkg install node-red_1.0.6.ipk
 
 
 ### Build scripts
