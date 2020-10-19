@@ -13,6 +13,7 @@ scp -pr *luci* root@$MyOpenWRT:/etc/node-red/
 scp -p flows*.json root@$MyOpenWRT:/etc/node-red/
 scp -p node-red root@$MyOpenWRT:/etc/init.d/node-red
 ssh root@$MyOpenWRT rm -f /etc/node-red/.*.backup
+ssh root@$MyOpenWRT ./buildNR.sh
 ssh root@$MyOpenWRT ./ipk-pack.sh
 cd dist
 scp -p root@$MyOpenWRT:/tmp/node*.ipk ./
