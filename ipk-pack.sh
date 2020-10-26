@@ -12,7 +12,7 @@ cd /usr/lib/node_modules
 cd /usr/lib/node_modules/node-red/node_modules
  find . -type d -name test -exec rm -r {} \;
  find . -type d -name doc -exec rm -r {} \;
- find . -type d -name example* -exec rm -r {} \;
+#  find . -type d -name example* -exec rm -r {} \;
  find . -type d -name sample -exec rm -r {} \;
  find . -type d -iname benchmark* -exec rm -r {} \;
  find . -type d -iname .nyc_output -exec rm -r {} \;
